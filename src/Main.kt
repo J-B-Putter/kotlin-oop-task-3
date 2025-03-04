@@ -141,21 +141,32 @@ class Steps() {
      * etc.
      */
     fun show() {
-
+        var stepNum = 0
+        for (step in steps) {
+            stepNum++
+            if (step != null) {
+                println("$stepNum. ${step.name}")
+            }
+            else println("$stepNum. ")
+        }
     }
 
     /**
      * Return the number of gnomes on steps
      */
     fun gnomeCount(): Int {
-        return 0
+        var stepUsed = 0
+        for (step in steps) {
+            if (step != null) stepUsed++
+        }
+        return stepUsed
     }
 
     /**
      * Place a given gnome on the given step (1-5)
      */
     fun placeGnome(step: Int, gnome: Gnome) {
-
+        
     }
 
     /**
